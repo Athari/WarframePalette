@@ -2072,7 +2072,7 @@ Valentine,82,29,30
 Valentine,101,44,45
 Valentine,117,51,52
 </script>
-<style>
+<style type="text/css">
 :root {
   --palette-scale: 2;
   --palette-size: 256px;
@@ -2137,15 +2137,18 @@ input {
 .input-red        { grid-area: r; }
 .input-green      { grid-area: g; }
 .input-blue       { grid-area: b; }
+.input-scale,
+.input-constraint {
+  margin-bottom: 10px;
+}
 #options {
   grid-area: pal;
   columns: 5;
 }
-.option {
-  display: block;
-}
-.input {
+.input,
+.option label {
   display: flex;
+  align-items: center;
 }
 .input label {
   width: 70px;
@@ -2159,16 +2162,34 @@ input {
 .input input[type=range] {
   width: 128px;
 }
+#match {
+  display: flex;
+  align-items: center;
+}
+#match .space {
+  flex: 1;
+}
+#match code {
+  margin: 0 0 0 auto;
+}
 .color-preview {
   display: inline-block;
   width: 48px;
   height: 24px;
+  margin: 2px 6px;
+}
+b {
+  font-weight: 600;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {  
+  opacity: 1;
 }
 </style>
-<style id="style"></style>
+<style id="style" type="text/css"></style>
 <h1>Warframe Palette Color Picker</h1>
-<p>Adjust L (lighness) value to change palette appearance. Moving cursor over palette changes H (hue) and S (saturation). You can also enter numeric values directly or use sliders. Constraint value allows choosing between perfect and restrained palette. Scale allows resizing palette, but bigger size doesn't add more precision and may cause lags.</p>
-<p>Note: currently <a href="https://caniuse.com/#search=webgl2">only Chrome and Firefox support WebGL 2.0</a>. Edge will support it once it switches to Blink engine. Safari apparently has no plans to support it in the nearest future. If you're using an unsupported browser, you can still use numeric controls, you just won't be able to pick color from the palette.</p>
+<p>Adjusting <b>Lighness</b> value changes palette appearance. Moving cursor over the palette changes <b>Hue</b> and <b>Saturation</b> values. You can also enter numbers directly or use sliders. <b>Constraint</b> value allows choosing between perfect and restrained palette. <b>Scale</b> allows resizing palette, but bigger size doesn't add more precision and may cause lags.</p>
+<p>Note: currently <a href="https://caniuse.com/#search=webgl2">only Chrome and Firefox support WebGL 2.0</a>. Edge will support it once it switches to Blink engine. Safari apparently has no plans to support it in the nearest future. If you're using an unsupported browser, you can still use numeric controls, you just won't be able to pick colors from the palette.</p>
 <p>Visit <a href="https://github.com/Athari/WarframePalette">project on GitHub</a>.</p>
 <div id="inputs"></div>
 <div id="match"></div>
@@ -2177,7 +2198,8 @@ input {
   <div class="line line-h"></div>
   <div class="line line-v"></div>
 </div>
-<script id="vs" type="x-shader/x-vertex">#version 300 es
+<script id="vertexShader" type="x-shader/x-vertex">
+#version 300 es
 in vec3 aPosition;
 out vec3 vPosition;
 
@@ -2186,7 +2208,8 @@ void main() {
   vPosition = aPosition;
 }
 </script>
-<script id="fs" type="x-shader/x-fragment">#version 300 es
+<script id="fragmentShader" type="x-shader/x-fragment">
+#version 300 es
 precision mediump float;
 uniform float uLightness;
 uniform float uConstraint;
@@ -2267,7 +2290,7 @@ void main() {
   glFragColor = vec4(perfectColorRgb * (1.0 - uConstraint) + paletteColorRgb * uConstraint, 1.0);
 }
 </script>
-<script>
+<script type="text/javascript">
 
 const time0 = (new Date()).getTime() / 1000;
 let paletteMask = 0xFFFFFFFF;
@@ -2300,8 +2323,8 @@ function glAddShader(gl, program, type, src) {
 
 function glInit(gl, vertexShader, fragmentShader) {
   let program = gl.createProgram();
-  glAddShader(gl, program, gl.VERTEX_SHADER, vertexShader);
-  glAddShader(gl, program, gl.FRAGMENT_SHADER, fragmentShader);
+  glAddShader(gl, program, gl.VERTEX_SHADER, vertexShader.trim());
+  glAddShader(gl, program, gl.FRAGMENT_SHADER, fragmentShader.trim());
   gl.linkProgram(program);
   if (!gl.getProgramParameter(program, gl.LINK_STATUS))
     throw "Could not link the shader program!";
@@ -2423,32 +2446,32 @@ let inputs = {
     value: 50,
   },
   hue: {
-    label: "H", unit: "",
+    label: "Hue", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
   saturation: {
-    label: "S", unit: "",
+    label: "Saturation", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
   lightness: {
-    label: "L", unit: "",
+    label: "Lighness", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
   red: {
-    label: "R", unit: "",
+    label: "Red", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
   green: {
-    label: "G", unit: "",
+    label: "Green", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
   blue: {
-    label: "B", unit: "",
+    label: "Blue", unit: "",
     min: 0, max: 255, step: 1,
     value: 127,
   },
@@ -2461,6 +2484,7 @@ let colors = document.querySelector('#palettesCsv').text.trim().replace("\r", ""
   paletteName: c.paletteName,
   index: c.index,
   rgb: c.rgb,
+  hsl: rgb2hsl(c.rgb),
   lab: rgb2lab(c.rgb),
 }));
 let inputsDiv = document.querySelector('#inputs');
@@ -2576,13 +2600,18 @@ let updateColorValues = (e, mode) => {
   let palr = paletteColor.rgb[0] * 255;
   let palg = paletteColor.rgb[1] * 255;
   let palb = paletteColor.rgb[2] * 255;
+  let palh = parseInt(paletteColor.hsl[0] * 255);
+  let pals = parseInt(paletteColor.hsl[1] * 255);
+  let pall = parseInt(paletteColor.hsl[2] * 255);
+  let palhex = ((1 << 24) + (palr << 16) + (palg << 8) + palb).toString(16).slice(1);
   let paletteRow = parseInt(paletteColor.index % 90 / 5) + 1;
   let paletteColumn = paletteColor.index % 5 + 1;
   match.innerHTML = `
     Selected <span class="color-preview" style="background: rgb(${perr}, ${perg}, ${perb})"></span>
     Matched <span class="color-preview" style="background: rgb(${palr}, ${palg}, ${palb})"></span>
-    ${paletteColor.paletteName} #${paletteColor.index % 90} (row ${paletteRow} column ${paletteColumn})
-    R=${palr} G=${palg} B=${palb}
+    <b>${paletteColor.paletteName} #${paletteColor.index % 90} (row ${paletteRow} column ${paletteColumn})</b>
+    <div class="space"> (Δ = ${Math.round(minDistance * 1000) / 1000})</div>
+    <code>rgb(${palr}, ${palg}, ${palb}) hsl(${palh}, ${pals}, ${pall}) #${palhex}</code>
   `;
   updatingColors = null;
 }
@@ -2605,7 +2634,7 @@ inputs.blue.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
 inputs.options.onchange = e => updateOptions();
 paletteDiv.onmousemove = e => updateColorValues(e, 'hsl');
 
-glStart(paletteCanvas, document.querySelector('#vs').text, document.querySelector('#fs').text);
+glStart(paletteCanvas, document.querySelector('#vertexShader').text, document.querySelector('#fragmentShader').text);
 updateStyle();
 updateColorValues({ offsetX: 255, offsetY: 255 }, 'hsl');
 </script>
