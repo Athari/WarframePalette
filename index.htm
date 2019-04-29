@@ -1,0 +1,2592 @@
+<!doctype html>
+<title>Warframe Palette Color Picker</title>
+<script id="palettesCsv" type="text/csv">
+Classic,70,16,17
+Classic,103,23,24
+Classic,149,32,36
+Classic,187,40,43
+Classic,209,46,51
+Classic,61,24,30
+Classic,88,34,42
+Classic,132,51,63
+Classic,174,72,88
+Classic,202,87,109
+Classic,32,13,21
+Classic,59,27,37
+Classic,113,56,68
+Classic,174,97,111
+Classic,212,136,151
+Classic,38,10,22
+Classic,62,16,36
+Classic,110,28,61
+Classic,157,39,91
+Classic,190,49,122
+Classic,15,18,33
+Classic,22,26,52
+Classic,38,48,91
+Classic,60,73,142
+Classic,81,102,183
+Classic,8,24,38
+Classic,12,42,68
+Classic,22,71,119
+Classic,30,110,168
+Classic,36,144,198
+Classic,14,51,69
+Classic,23,73,97
+Classic,41,114,141
+Classic,63,159,183
+Classic,85,191,210
+Classic,25,46,42
+Classic,37,69,61
+Classic,58,105,95
+Classic,84,150,139
+Classic,112,188,177
+Classic,17,44,24
+Classic,26,70,38
+Classic,44,121,64
+Classic,65,169,94
+Classic,83,201,124
+Classic,58,59,11
+Classic,96,100,18
+Classic,143,146,31
+Classic,184,186,44
+Classic,209,208,55
+Classic,90,70,41
+Classic,127,97,58
+Classic,169,140,80
+Classic,206,181,106
+Classic,230,209,134
+Classic,124,65,27
+Classic,146,84,37
+Classic,173,113,55
+Classic,198,150,80
+Classic,221,182,110
+Classic,154,58,30
+Classic,179,79,41
+Classic,206,114,61
+Classic,225,160,90
+Classic,232,195,129
+Classic,50,23,9
+Classic,96,41,17
+Classic,164,77,30
+Classic,209,116,38
+Classic,215,146,39
+Classic,41,29,28
+Classic,76,55,50
+Classic,143,104,92
+Classic,201,159,142
+Classic,228,191,173
+Classic,40,39,36
+Classic,93,90,83
+Classic,190,186,175
+Classic,245,243,235
+Classic,255,255,255
+Classic,32,35,36
+Classic,71,79,79
+Classic,150,164,164
+Classic,214,225,225
+Classic,243,251,250
+Classic,29,30,34
+Classic,63,67,75
+Classic,138,142,159
+Classic,201,205,221
+Classic,231,235,247
+ClassicSat,82,4,6
+ClassicSat,121,5,7
+ClassicSat,175,6,11
+ClassicSat,220,8,13
+ClassicSat,246,10,17
+ClassicSat,70,16,25
+ClassicSat,100,22,34
+ClassicSat,150,33,50
+ClassicSat,197,49,72
+ClassicSat,228,61,94
+ClassicSat,36,9,20
+ClassicSat,66,20,35
+ClassicSat,126,44,61
+ClassicSat,192,80,101
+ClassicSat,229,119,141
+ClassicSat,45,4,21
+ClassicSat,73,6,35
+ClassicSat,129,10,58
+ClassicSat,184,13,89
+ClassicSat,222,18,124
+ClassicSat,11,15,37
+ClassicSat,16,22,59
+ClassicSat,26,40,103
+ClassicSat,42,61,161
+ClassicSat,58,88,206
+ClassicSat,1,25,45
+ClassicSat,0,43,81
+ClassicSat,0,72,141
+ClassicSat,0,116,199
+ClassicSat,0,156,234
+ClassicSat,2,56,81
+ClassicSat,7,80,114
+ClassicSat,19,126,164
+ClassicSat,37,176,210
+ClassicSat,57,212,238
+ClassicSat,21,51,45
+ClassicSat,30,76,65
+ClassicSat,48,116,101
+ClassicSat,70,165,149
+ClassicSat,95,205,189
+ClassicSat,11,50,21
+ClassicSat,17,80,34
+ClassicSat,27,138,56
+ClassicSat,42,193,84
+ClassicSat,57,228,116
+ClassicSat,69,70,0
+ClassicSat,114,119,0
+ClassicSat,168,172,5
+ClassicSat,216,218,12
+ClassicSat,244,243,21
+ClassicSat,101,72,30
+ClassicSat,143,100,43
+ClassicSat,189,147,60
+ClassicSat,229,193,84
+ClassicSat,252,222,113
+ClassicSat,146,61,6
+ClassicSat,171,81,13
+ClassicSat,200,113,29
+ClassicSat,225,156,54
+ClassicSat,246,190,85
+ClassicSat,182,43,2
+ClassicSat,210,66,10
+ClassicSat,238,106,29
+ClassicSat,255,161,60
+ClassicSat,255,202,106
+ClassicSat,60,20,0
+ClassicSat,114,35,0
+ClassicSat,194,68,0
+ClassicSat,247,113,0
+ClassicSat,255,156,0
+ClassicSat,44,27,25
+ClassicSat,82,51,44
+ClassicSat,155,98,81
+ClassicSat,214,153,129
+ClassicSat,240,187,161
+ClassicSat,41,40,35
+ClassicSat,95,91,81
+ClassicSat,193,187,172
+ClassicSat,248,245,233
+ClassicSat,255,255,255
+ClassicSat,31,36,37
+ClassicSat,69,81,81
+ClassicSat,147,167,167
+ClassicSat,212,228,228
+ClassicSat,241,253,252
+ClassicSat,28,29,35
+ClassicSat,61,66,78
+ClassicSat,133,139,164
+ClassicSat,197,203,226
+ClassicSat,228,234,251
+Corpus,226,244,247
+Corpus,178,212,226
+Corpus,117,173,200
+Corpus,82,154,191
+Corpus,64,147,191
+Corpus,101,243,250
+Corpus,99,225,250
+Corpus,96,199,249
+Corpus,92,171,250
+Corpus,89,145,249
+Corpus,117,220,255
+Corpus,77,206,230
+Corpus,25,190,199
+Corpus,13,167,172
+Corpus,17,146,152
+Corpus,68,195,119
+Corpus,63,183,112
+Corpus,57,165,102
+Corpus,51,148,90
+Corpus,45,132,80
+Corpus,236,213,87
+Corpus,209,205,55
+Corpus,175,196,14
+Corpus,103,196,15
+Corpus,25,200,32
+Corpus,229,255,1
+Corpus,218,243,1
+Corpus,202,225,1
+Corpus,185,205,1
+Corpus,168,187,1
+Corpus,241,215,17
+Corpus,227,202,16
+Corpus,204,182,13
+Corpus,181,161,11
+Corpus,159,141,10
+Corpus,255,243,123
+Corpus,245,234,117
+Corpus,231,219,110
+Corpus,214,204,102
+Corpus,199,190,94
+Corpus,232,186,87
+Corpus,224,170,75
+Corpus,213,146,56
+Corpus,200,120,37
+Corpus,189,96,18
+Corpus,248,174,16
+Corpus,238,165,17
+Corpus,224,151,17
+Corpus,208,137,18
+Corpus,193,123,19
+Corpus,220,73,28
+Corpus,203,67,26
+Corpus,178,59,23
+Corpus,151,49,19
+Corpus,126,42,15
+Corpus,237,104,70
+Corpus,227,97,64
+Corpus,212,87,54
+Corpus,195,74,45
+Corpus,179,64,35
+Corpus,250,97,101
+Corpus,240,83,87
+Corpus,226,62,67
+Corpus,210,39,44
+Corpus,195,19,23
+Corpus,189,164,136
+Corpus,180,156,129
+Corpus,167,145,120
+Corpus,152,132,109
+Corpus,138,120,99
+Corpus,97,97,97
+Corpus,88,88,88
+Corpus,74,74,75
+Corpus,60,59,59
+Corpus,46,46,45
+Corpus,90,93,104
+Corpus,83,87,97
+Corpus,72,78,88
+Corpus,61,68,77
+Corpus,50,58,68
+Corpus,120,138,125
+Corpus,111,128,116
+Corpus,97,113,101
+Corpus,82,96,85
+Corpus,67,82,72
+Corpus,67,49,111
+Corpus,60,44,99
+Corpus,50,36,83
+Corpus,39,28,65
+Corpus,28,20,47
+Daybreak,160,198,232
+Daybreak,155,183,217
+Daybreak,149,164,200
+Daybreak,142,145,181
+Daybreak,136,126,163
+Daybreak,196,145,186
+Daybreak,184,136,177
+Daybreak,165,124,164
+Daybreak,145,109,149
+Daybreak,126,97,136
+Daybreak,239,174,216
+Daybreak,230,168,210
+Daybreak,219,160,202
+Daybreak,206,152,193
+Daybreak,195,144,185
+Daybreak,219,151,207
+Daybreak,214,146,206
+Daybreak,206,139,203
+Daybreak,197,132,200
+Daybreak,190,125,198
+Daybreak,255,132,210
+Daybreak,249,133,208
+Daybreak,239,134,206
+Daybreak,229,135,203
+Daybreak,219,136,201
+Daybreak,255,168,223
+Daybreak,245,172,218
+Daybreak,231,177,212
+Daybreak,215,183,205
+Daybreak,200,188,198
+Daybreak,95,106,117
+Daybreak,124,133,141
+Daybreak,154,159,165
+Daybreak,181,184,188
+Daybreak,203,204,206
+Daybreak,73,85,99
+Daybreak,101,111,122
+Daybreak,130,138,146
+Daybreak,159,165,170
+Daybreak,186,188,192
+Daybreak,53,67,83
+Daybreak,78,90,103
+Daybreak,107,116,127
+Daybreak,136,144,151
+Daybreak,165,170,175
+Daybreak,36,52,69
+Daybreak,57,72,86
+Daybreak,84,95,108
+Daybreak,113,122,132
+Daybreak,142,149,156
+Daybreak,192,85,49
+Daybreak,184,95,65
+Daybreak,176,105,83
+Daybreak,168,116,100
+Daybreak,160,126,118
+Daybreak,202,72,27
+Daybreak,169,66,29
+Daybreak,134,59,32
+Daybreak,101,52,35
+Daybreak,73,46,37
+Daybreak,219,76,26
+Daybreak,190,70,28
+Daybreak,155,63,31
+Daybreak,121,56,33
+Daybreak,89,49,35
+Daybreak,233,79,25
+Daybreak,208,74,27
+Daybreak,176,67,29
+Daybreak,142,60,32
+Daybreak,107,53,34
+Daybreak,183,71,36
+Daybreak,161,68,41
+Daybreak,137,64,46
+Daybreak,113,60,51
+Daybreak,89,57,56
+Daybreak,59,91,118
+Daybreak,52,83,110
+Daybreak,41,71,97
+Daybreak,30,58,84
+Daybreak,19,46,71
+Daybreak,100,137,166
+Daybreak,94,131,158
+Daybreak,85,122,147
+Daybreak,74,111,135
+Daybreak,65,102,124
+Daybreak,164,209,242
+Daybreak,150,193,225
+Daybreak,128,169,200
+Daybreak,105,142,172
+Daybreak,83,118,147
+Dojo,99,119,156
+Dojo,106,127,167
+Dojo,116,140,183
+Dojo,128,154,201
+Dojo,140,168,220
+Dojo,145,156,62
+Dojo,160,172,68
+Dojo,181,195,78
+Dojo,203,219,88
+Dojo,224,240,97
+Dojo,79,68,43
+Dojo,102,91,62
+Dojo,136,122,92
+Dojo,175,158,123
+Dojo,208,191,152
+Dojo,35,50,79
+Dojo,60,79,105
+Dojo,95,123,145
+Dojo,135,170,189
+Dojo,170,213,228
+Dojo,35,50,79
+Dojo,47,67,106
+Dojo,64,92,145
+Dojo,83,119,188
+Dojo,101,143,229
+Dojo,52,77,71
+Dojo,71,104,97
+Dojo,98,144,133
+Dojo,127,188,174
+Dojo,155,228,211
+Dojo,0,153,116
+Dojo,0,168,128
+Dojo,0,191,144
+Dojo,0,217,163
+Dojo,0,239,180
+Dojo,77,26,9
+Dojo,105,31,7
+Dojo,142,38,4
+Dojo,153,49,15
+Dojo,153,59,29
+Dojo,165,140,48
+Dojo,176,150,51
+Dojo,192,163,57
+Dojo,211,178,62
+Dojo,227,193,66
+Dojo,166,155,133
+Dojo,177,166,143
+Dojo,195,183,156
+Dojo,213,201,171
+Dojo,231,217,186
+Dojo,90,57,167
+Dojo,98,62,180
+Dojo,108,68,200
+Dojo,119,75,221
+Dojo,130,82,242
+Dojo,69,89,165
+Dojo,75,95,178
+Dojo,82,105,194
+Dojo,91,115,214
+Dojo,98,125,231
+Dojo,121,11,18
+Dojo,124,19,25
+Dojo,128,32,36
+Dojo,133,45,48
+Dojo,137,57,58
+Dojo,40,86,111
+Dojo,48,103,133
+Dojo,60,128,165
+Dojo,72,155,201
+Dojo,84,181,233
+Dojo,42,78,149
+Dojo,51,88,155
+Dojo,66,102,164
+Dojo,81,118,172
+Dojo,94,134,181
+Dojo,14,138,163
+Dojo,23,149,175
+Dojo,35,166,192
+Dojo,47,184,211
+Dojo,60,200,228
+Dojo,166,102,46
+Dojo,177,109,50
+Dojo,193,119,54
+Dojo,212,131,60
+Dojo,229,141,65
+Dojo,163,92,30
+Dojo,175,107,47
+Dojo,193,129,71
+Dojo,211,153,98
+Dojo,229,176,123
+Easter,205,167,94
+Easter,208,175,95
+Easter,209,179,95
+Easter,218,187,98
+Easter,218,194,98
+Easter,205,180,94
+Easter,208,189,95
+Easter,209,193,95
+Easter,218,201,98
+Easter,218,209,98
+Easter,181,175,89
+Easter,189,184,91
+Easter,197,192,109
+Easter,205,201,112
+Easter,216,211,115
+Easter,135,172,95
+Easter,162,191,131
+Easter,174,199,147
+Easter,182,208,153
+Easter,190,219,159
+Easter,97,170,138
+Easter,131,188,164
+Easter,148,197,175
+Easter,153,206,183
+Easter,159,216,192
+Easter,86,163,169
+Easter,118,181,188
+Easter,135,191,195
+Easter,140,199,204
+Easter,146,209,214
+Easter,109,165,188
+Easter,141,184,203
+Easter,155,193,209
+Easter,162,203,219
+Easter,169,212,229
+Easter,159,169,191
+Easter,180,188,205
+Easter,190,196,211
+Easter,199,206,222
+Easter,208,216,233
+Easter,190,165,190
+Easter,203,185,204
+Easter,210,194,211
+Easter,220,203,221
+Easter,232,213,233
+Easter,228,171,197
+Easter,233,190,210
+Easter,236,198,215
+Easter,244,207,226
+Easter,245,214,234
+Easter,232,161,194
+Easter,237,181,208
+Easter,239,191,214
+Easter,241,196,221
+Easter,243,204,230
+Easter,204,129,180
+Easter,215,157,197
+Easter,220,170,204
+Easter,230,176,213
+Easter,238,183,223
+Easter,178,97,167
+Easter,195,132,186
+Easter,203,148,195
+Easter,213,154,204
+Easter,223,160,214
+Easter,151,84,160
+Easter,169,99,177
+Easter,180,119,187
+Easter,188,123,195
+Easter,197,127,204
+Easter,140,80,145
+Easter,158,84,162
+Easter,171,104,174
+Easter,177,107,180
+Easter,185,110,189
+Easter,153,82,124
+Easter,169,91,146
+Easter,180,112,161
+Easter,188,115,167
+Easter,197,119,175
+Easter,160,84,110
+Easter,175,94,136
+Easter,186,115,151
+Easter,194,118,157
+Easter,203,122,163
+Easter,168,86,97
+Easter,181,97,125
+Easter,191,118,142
+Easter,200,122,147
+Easter,209,126,153
+Eximus,105,119,133
+Eximus,95,107,121
+Eximus,81,92,105
+Eximus,67,76,87
+Eximus,53,61,70
+Eximus,230,213,111
+Eximus,229,209,109
+Eximus,226,201,105
+Eximus,224,193,102
+Eximus,223,186,100
+Eximus,19,177,233
+Eximus,20,168,215
+Eximus,19,155,191
+Eximus,17,140,163
+Eximus,17,128,140
+Eximus,203,47,47
+Eximus,196,50,50
+Eximus,186,52,52
+Eximus,176,56,56
+Eximus,165,58,59
+Eximus,127,172,184
+Eximus,116,158,170
+Eximus,104,141,151
+Eximus,88,120,130
+Eximus,76,103,111
+Eximus,32,236,20
+Eximus,35,218,19
+Eximus,42,194,19
+Eximus,48,166,19
+Eximus,54,141,18
+Eximus,222,205,157
+Eximus,216,199,150
+Eximus,207,192,141
+Eximus,197,185,130
+Eximus,188,177,121
+Eximus,138,222,107
+Eximus,131,213,99
+Eximus,120,197,87
+Eximus,109,182,74
+Eximus,99,169,63
+Eximus,236,222,20
+Eximus,236,215,20
+Eximus,236,205,20
+Eximus,236,194,20
+Eximus,236,184,20
+Eximus,242,240,233
+Eximus,233,240,233
+Eximus,220,239,234
+Eximus,206,238,235
+Eximus,193,237,236
+Eximus,108,180,243
+Eximus,103,175,238
+Eximus,95,167,230
+Eximus,88,159,222
+Eximus,80,151,213
+Eximus,236,20,20
+Eximus,219,20,20
+Eximus,194,22,21
+Eximus,166,23,22
+Eximus,141,23,24
+Eximus,91,63,110
+Eximus,87,57,105
+Eximus,81,51,97
+Eximus,74,42,88
+Eximus,68,34,80
+Eximus,162,191,165
+Eximus,150,175,153
+Eximus,131,152,134
+Eximus,110,126,112
+Eximus,92,102,94
+Eximus,90,209,104
+Eximus,89,206,116
+Eximus,87,200,131
+Eximus,84,193,148
+Eximus,82,188,164
+Eximus,249,243,234
+Eximus,246,236,219
+Eximus,242,225,196
+Eximus,236,213,170
+Eximus,231,202,148
+Eximus,220,170,127
+Eximus,218,161,113
+Eximus,215,149,97
+Eximus,209,136,78
+Eximus,205,125,61
+Eximus,236,157,20
+Eximus,236,152,20
+Eximus,236,144,20
+Eximus,236,135,20
+Eximus,236,126,20
+Fire,255,222,147
+Fire,255,227,164
+Fire,255,233,182
+Fire,255,240,196
+Fire,255,252,209
+Fire,255,212,87
+Fire,255,219,108
+Fire,255,227,132
+Fire,255,234,142
+Fire,255,247,155
+Fire,255,192,19
+Fire,255,203,32
+Fire,255,214,51
+Fire,255,223,53
+Fire,255,234,63
+Fire,255,165,16
+Fire,255,180,28
+Fire,255,195,46
+Fire,255,202,48
+Fire,255,215,56
+Fire,255,119,10
+Fire,255,137,20
+Fire,255,158,36
+Fire,255,165,37
+Fire,255,178,45
+Fire,255,98,8
+Fire,255,116,17
+Fire,255,139,31
+Fire,255,145,32
+Fire,255,159,39
+Fire,233,67,0
+Fire,245,85,0
+Fire,255,110,7
+Fire,255,116,18
+Fire,255,131,31
+Fire,186,26,0
+Fire,200,39,0
+Fire,219,59,0
+Fire,227,62,0
+Fire,244,71,0
+Fire,160,11,0
+Fire,176,21,0
+Fire,195,35,0
+Fire,203,37,0
+Fire,217,45,0
+Fire,155,27,0
+Fire,179,39,0
+Fire,209,56,0
+Fire,217,59,0
+Fire,236,68,0
+Fire,153,50,0
+Fire,183,66,0
+Fire,211,92,10
+Fire,219,95,10
+Fire,233,107,19
+Fire,155,75,0
+Fire,178,96,10
+Fire,198,123,33
+Fire,206,127,35
+Fire,221,140,43
+Fire,127,58,0
+Fire,152,78,8
+Fire,174,104,29
+Fire,181,107,29
+Fire,196,119,38
+Fire,80,27,0
+Fire,104,44,6
+Fire,130,68,21
+Fire,135,71,22
+Fire,149,82,28
+Fire,55,16,0
+Fire,79,28,4
+Fire,106,49,16
+Fire,111,50,16
+Fire,124,60,23
+Fire,34,12,0
+Fire,53,22,4
+Fire,78,39,16
+Fire,81,40,16
+Fire,93,49,21
+Fire,8,0,0
+Fire,21,2,0
+Fire,42,3,0
+Fire,70,6,0
+Fire,87,7,0
+Fire,18,18,18
+Fire,46,46,46
+Fire,96,96,96
+Fire,159,159,159
+Fire,196,196,196
+Gamma,62,23,24
+Gamma,92,34,35
+Gamma,132,48,51
+Gamma,167,61,63
+Gamma,187,69,73
+Gamma,56,29,34
+Gamma,80,41,47
+Gamma,120,62,70
+Gamma,160,86,98
+Gamma,186,103,119
+Gamma,29,16,21
+Gamma,54,31,38
+Gamma,105,64,72
+Gamma,164,108,118
+Gamma,201,146,157
+Gamma,34,14,22
+Gamma,56,23,37
+Gamma,99,40,64
+Gamma,141,56,94
+Gamma,171,69,122
+Gamma,17,19,30
+Gamma,27,30,48
+Gamma,45,52,83
+Gamma,72,81,131
+Gamma,95,110,169
+Gamma,12,24,34
+Gamma,20,41,60
+Gamma,35,71,105
+Gamma,50,108,149
+Gamma,58,136,175
+Gamma,22,49,61
+Gamma,34,70,87
+Gamma,55,108,127
+Gamma,80,149,166
+Gamma,102,179,192
+Gamma,28,43,40
+Gamma,41,64,58
+Gamma,65,99,91
+Gamma,94,141,133
+Gamma,122,177,169
+Gamma,21,40,26
+Gamma,33,64,41
+Gamma,55,110,69
+Gamma,80,155,101
+Gamma,100,185,129
+Gamma,51,52,17
+Gamma,86,89,30
+Gamma,128,130,47
+Gamma,165,166,63
+Gamma,188,187,77
+Gamma,83,69,48
+Gamma,118,96,68
+Gamma,156,135,92
+Gamma,192,174,120
+Gamma,217,202,148
+Gamma,111,68,41
+Gamma,131,86,52
+Gamma,157,114,72
+Gamma,182,147,97
+Gamma,205,177,125
+Gamma,137,67,47
+Gamma,160,88,60
+Gamma,185,119,81
+Gamma,206,159,109
+Gamma,217,190,143
+Gamma,45,25,15
+Gamma,85,45,28
+Gamma,145,82,48
+Gamma,185,118,62
+Gamma,191,141,64
+Gamma,39,31,30
+Gamma,72,56,53
+Gamma,136,108,99
+Gamma,192,162,150
+Gamma,220,194,181
+Gamma,39,38,36
+Gamma,91,89,84
+Gamma,187,184,177
+Gamma,244,243,237
+Gamma,255,255,255
+Gamma,32,34,35
+Gamma,72,78,78
+Gamma,152,162,162
+Gamma,216,224,224
+Gamma,244,250,249
+Gamma,30,30,33
+Gamma,65,67,73
+Gamma,141,144,156
+Gamma,204,207,218
+Gamma,234,237,245
+Grineer,255,163,57
+Grineer,255,152,43
+Grineer,255,141,30
+Grineer,255,131,18
+Grineer,255,123,8
+Grineer,255,202,108
+Grineer,255,194,97
+Grineer,255,185,86
+Grineer,255,174,72
+Grineer,255,163,58
+Grineer,183,132,39
+Grineer,179,123,35
+Grineer,174,115,31
+Grineer,170,108,27
+Grineer,168,101,24
+Grineer,198,161,54
+Grineer,195,155,52
+Grineer,192,147,47
+Grineer,188,140,44
+Grineer,183,131,39
+Grineer,126,66,38
+Grineer,115,61,36
+Grineer,105,56,35
+Grineer,97,52,33
+Grineer,91,50,32
+Grineer,170,84,44
+Grineer,160,80,42
+Grineer,149,76,41
+Grineer,137,70,39
+Grineer,126,65,38
+Grineer,84,93,40
+Grineer,75,84,38
+Grineer,69,76,36
+Grineer,63,70,34
+Grineer,58,65,33
+Grineer,115,128,48
+Grineer,108,120,46
+Grineer,100,111,45
+Grineer,91,102,42
+Grineer,83,93,39
+Grineer,119,153,0
+Grineer,106,135,0
+Grineer,94,119,0
+Grineer,84,107,0
+Grineer,76,97,0
+Grineer,155,199,0
+Grineer,144,186,0
+Grineer,133,170,0
+Grineer,119,152,0
+Grineer,106,136,0
+Grineer,33,175,196
+Grineer,30,162,184
+Grineer,28,150,174
+Grineer,24,141,166
+Grineer,23,134,160
+Grineer,47,225,241
+Grineer,44,214,231
+Grineer,40,201,220
+Grineer,37,188,208
+Grineer,33,174,196
+Grineer,65,140,135
+Grineer,60,124,117
+Grineer,56,110,101
+Grineer,52,97,86
+Grineer,49,89,77
+Grineer,79,182,183
+Grineer,75,170,169
+Grineer,71,155,153
+Grineer,65,140,135
+Grineer,60,125,117
+Grineer,107,112,102
+Grineer,95,101,94
+Grineer,84,91,86
+Grineer,76,83,80
+Grineer,69,77,75
+Grineer,155,155,136
+Grineer,144,145,128
+Grineer,132,135,120
+Grineer,119,123,111
+Grineer,107,112,102
+Grineer,80,73,65
+Grineer,68,64,57
+Grineer,57,54,49
+Grineer,37,37,33
+Grineer,31,32,29
+Grineer,117,106,94
+Grineer,109,99,88
+Grineer,99,90,80
+Grineer,88,81,72
+Grineer,77,71,64
+Halloween,222,0,0
+Halloween,195,0,0
+Halloween,167,0,0
+Halloween,140,0,0
+Halloween,118,0,0
+Halloween,235,0,0
+Halloween,211,0,0
+Halloween,184,0,0
+Halloween,156,0,0
+Halloween,131,0,0
+Halloween,247,0,0
+Halloween,226,0,0
+Halloween,201,0,0
+Halloween,173,0,0
+Halloween,146,0,0
+Halloween,255,121,9
+Halloween,255,105,8
+Halloween,255,87,7
+Halloween,255,70,6
+Halloween,255,56,6
+Halloween,255,130,9
+Halloween,255,115,9
+Halloween,255,98,8
+Halloween,255,80,7
+Halloween,255,64,6
+Halloween,255,137,10
+Halloween,255,124,9
+Halloween,255,108,8
+Halloween,255,91,7
+Halloween,255,74,6
+Halloween,255,211,0
+Halloween,255,193,0
+Halloween,255,173,0
+Halloween,255,156,0
+Halloween,255,140,0
+Halloween,255,220,0
+Halloween,255,204,0
+Halloween,255,185,0
+Halloween,255,166,0
+Halloween,255,149,0
+Halloween,255,227,0
+Halloween,255,214,0
+Halloween,255,196,0
+Halloween,255,177,0
+Halloween,255,160,0
+Halloween,235,255,103
+Halloween,219,253,43
+Halloween,200,251,0
+Halloween,185,250,0
+Halloween,172,248,0
+Halloween,242,255,135
+Halloween,227,255,81
+Halloween,213,253,17
+Halloween,195,250,0
+Halloween,180,250,0
+Halloween,251,255,162
+Halloween,237,255,114
+Halloween,223,253,55
+Halloween,202,251,0
+Halloween,187,250,0
+Halloween,164,213,108
+Halloween,147,195,74
+Halloween,133,181,39
+Halloween,122,168,5
+Halloween,110,157,0
+Halloween,171,225,124
+Halloween,156,205,95
+Halloween,140,189,60
+Halloween,129,175,25
+Halloween,116,163,0
+Halloween,179,235,139
+Halloween,166,218,113
+Halloween,151,199,81
+Halloween,138,185,46
+Halloween,124,171,12
+Halloween,114,158,97
+Halloween,97,139,78
+Halloween,81,120,60
+Halloween,67,104,45
+Halloween,60,92,35
+Halloween,122,171,108
+Halloween,109,154,92
+Halloween,94,134,73
+Halloween,77,115,56
+Halloween,65,100,41
+Halloween,133,183,119
+Halloween,120,167,105
+Halloween,105,149,87
+Halloween,89,129,69
+Halloween,73,111,51
+Ice,120,255,212
+Ice,155,255,225
+Ice,187,255,235
+Ice,206,255,249
+Ice,213,253,255
+Ice,84,215,195
+Ice,116,225,209
+Ice,140,232,220
+Ice,155,236,226
+Ice,167,255,245
+Ice,7,148,139
+Ice,30,172,165
+Ice,50,189,183
+Ice,66,199,194
+Ice,71,215,210
+Ice,0,116,116
+Ice,1,145,145
+Ice,3,166,166
+Ice,6,179,179
+Ice,6,193,193
+Ice,0,95,99
+Ice,4,126,130
+Ice,11,149,153
+Ice,19,164,167
+Ice,21,177,180
+Ice,0,59,71
+Ice,13,91,103
+Ice,27,117,128
+Ice,40,134,144
+Ice,43,145,156
+Ice,1,42,57
+Ice,19,74,89
+Ice,36,100,115
+Ice,51,118,132
+Ice,55,128,143
+Ice,1,36,49
+Ice,19,67,81
+Ice,35,92,107
+Ice,49,110,124
+Ice,53,119,134
+Ice,0,12,24
+Ice,15,38,53
+Ice,29,60,77
+Ice,42,77,95
+Ice,45,83,103
+Ice,0,6,15
+Ice,13,27,41
+Ice,27,46,64
+Ice,40,62,81
+Ice,43,67,88
+Ice,0,21,37
+Ice,10,49,68
+Ice,22,73,93
+Ice,34,91,111
+Ice,37,98,120
+Ice,0,132,174
+Ice,2,159,193
+Ice,7,178,206
+Ice,13,189,214
+Ice,14,204,231
+Ice,0,202,255
+Ice,0,215,255
+Ice,0,224,255
+Ice,0,229,255
+Ice,0,247,255
+Ice,73,184,170
+Ice,105,201,190
+Ice,130,213,204
+Ice,146,220,212
+Ice,158,238,229
+Ice,131,177,143
+Ice,158,196,167
+Ice,177,209,185
+Ice,189,216,196
+Ice,204,233,212
+Ice,177,174,126
+Ice,196,193,153
+Ice,209,206,173
+Ice,216,214,185
+Ice,233,231,200
+Ice,189,198,190
+Ice,205,212,206
+Ice,216,222,217
+Ice,222,227,223
+Ice,240,245,241
+Ice,195,215,232
+Ice,210,225,238
+Ice,220,232,242
+Ice,226,236,244
+Ice,244,255,255
+Infested,31,142,0
+Infested,27,134,0
+Infested,22,128,0
+Infested,19,122,0
+Infested,15,117,0
+Infested,47,166,0
+Infested,42,158,0
+Infested,37,150,0
+Infested,31,142,0
+Infested,26,134,0
+Infested,65,193,0
+Infested,60,184,0
+Infested,53,175,0
+Infested,47,167,0
+Infested,42,158,0
+Infested,82,218,0
+Infested,76,210,0
+Infested,70,202,0
+Infested,65,193,0
+Infested,59,184,0
+Infested,96,240,0
+Infested,92,233,0
+Infested,87,226,0
+Infested,82,218,0
+Infested,77,210,0
+Infested,104,228,10
+Infested,125,196,38
+Infested,153,154,75
+Infested,183,109,116
+Infested,213,64,154
+Infested,222,2,196
+Infested,231,2,200
+Infested,242,1,204
+Infested,248,1,207
+Infested,255,0,210
+Infested,201,4,187
+Infested,213,3,192
+Infested,224,2,196
+Infested,234,1,201
+Infested,244,1,205
+Infested,156,7,167
+Infested,169,6,174
+Infested,182,5,179
+Infested,194,5,185
+Infested,207,4,189
+Infested,134,9,159
+Infested,146,8,164
+Infested,159,7,169
+Infested,172,6,175
+Infested,185,6,181
+Infested,98,12,143
+Infested,107,12,147
+Infested,117,11,151
+Infested,128,9,156
+Infested,140,9,161
+Infested,83,11,136
+Infested,72,11,131
+Infested,61,10,126
+Infested,49,9,120
+Infested,37,8,114
+Infested,0,5,124
+Infested,0,5,116
+Infested,0,6,108
+Infested,0,6,101
+Infested,0,6,96
+Infested,0,4,153
+Infested,0,4,143
+Infested,0,5,133
+Infested,0,5,125
+Infested,0,6,116
+Infested,0,3,184
+Infested,0,3,173
+Infested,0,4,163
+Infested,0,4,152
+Infested,0,4,143
+Infested,0,2,213
+Infested,0,2,203
+Infested,0,3,193
+Infested,0,3,183
+Infested,0,4,173
+Infested,0,1,237
+Infested,0,1,230
+Infested,0,1,222
+Infested,0,2,212
+Infested,0,2,204
+Infested,1,4,255
+Infested,12,29,255
+Infested,26,63,255
+Infested,42,100,255
+Infested,56,132,255
+KiTeer,144,255,220
+KiTeer,129,250,214
+KiTeer,108,243,205
+KiTeer,83,235,194
+KiTeer,56,227,183
+KiTeer,136,252,217
+KiTeer,117,246,208
+KiTeer,93,238,198
+KiTeer,67,230,187
+KiTeer,41,221,177
+KiTeer,125,249,212
+KiTeer,102,242,203
+KiTeer,77,233,192
+KiTeer,51,224,181
+KiTeer,27,216,172
+KiTeer,104,143,145
+KiTeer,99,137,137
+KiTeer,94,127,126
+KiTeer,87,117,114
+KiTeer,80,105,100
+KiTeer,101,140,141
+KiTeer,96,131,131
+KiTeer,90,121,119
+KiTeer,82,110,105
+KiTeer,76,99,92
+KiTeer,99,135,136
+KiTeer,92,125,124
+KiTeer,85,114,111
+KiTeer,78,103,98
+KiTeer,72,92,85
+KiTeer,135,186,156
+KiTeer,128,175,147
+KiTeer,117,159,135
+KiTeer,105,141,119
+KiTeer,91,122,104
+KiTeer,131,180,152
+KiTeer,121,166,140
+KiTeer,110,149,125
+KiTeer,97,130,110
+KiTeer,84,111,95
+KiTeer,125,172,145
+KiTeer,115,156,131
+KiTeer,102,137,116
+KiTeer,89,118,101
+KiTeer,77,101,87
+KiTeer,159,101,68
+KiTeer,150,96,65
+KiTeer,135,87,60
+KiTeer,119,78,55
+KiTeer,102,68,49
+KiTeer,154,98,67
+KiTeer,141,91,63
+KiTeer,125,82,57
+KiTeer,109,72,52
+KiTeer,92,62,46
+KiTeer,146,94,64
+KiTeer,132,85,60
+KiTeer,116,76,54
+KiTeer,98,66,48
+KiTeer,83,57,43
+KiTeer,0,211,226
+KiTeer,0,197,212
+KiTeer,0,177,190
+KiTeer,0,154,164
+KiTeer,0,129,138
+KiTeer,0,204,218
+KiTeer,0,186,199
+KiTeer,0,163,175
+KiTeer,0,139,149
+KiTeer,0,114,123
+KiTeer,0,194,207
+KiTeer,0,172,185
+KiTeer,0,148,160
+KiTeer,0,124,133
+KiTeer,0,102,109
+KiTeer,96,149,153
+KiTeer,87,137,140
+KiTeer,73,119,122
+KiTeer,57,98,101
+KiTeer,42,75,78
+KiTeer,91,143,146
+KiTeer,80,127,130
+KiTeer,64,106,110
+KiTeer,48,84,87
+KiTeer,33,63,65
+KiTeer,84,133,137
+KiTeer,70,115,118
+KiTeer,54,94,96
+KiTeer,39,71,73
+KiTeer,24,52,54
+Lotus,130,125,211
+Lotus,107,102,192
+Lotus,80,76,170
+Lotus,54,51,149
+Lotus,30,28,130
+Lotus,136,130,216
+Lotus,117,112,200
+Lotus,92,87,179
+Lotus,65,62,158
+Lotus,39,36,137
+Lotus,126,124,144
+Lotus,107,106,126
+Lotus,86,85,103
+Lotus,63,61,81
+Lotus,44,42,62
+Lotus,131,130,150
+Lotus,116,114,134
+Lotus,95,93,112
+Lotus,73,71,90
+Lotus,52,50,70
+Lotus,104,102,131
+Lotus,86,84,110
+Lotus,64,62,87
+Lotus,45,43,65
+Lotus,32,30,51
+Lotus,112,110,140
+Lotus,95,93,122
+Lotus,75,73,99
+Lotus,54,52,76
+Lotus,37,35,57
+Lotus,68,82,126
+Lotus,61,75,118
+Lotus,53,66,107
+Lotus,43,56,96
+Lotus,36,49,88
+Lotus,70,84,128
+Lotus,64,78,121
+Lotus,56,70,112
+Lotus,46,60,100
+Lotus,38,52,91
+Lotus,62,70,97
+Lotus,55,62,93
+Lotus,47,53,89
+Lotus,40,46,83
+Lotus,36,41,81
+Lotus,65,73,99
+Lotus,59,66,95
+Lotus,52,58,91
+Lotus,43,50,86
+Lotus,38,43,82
+Lotus,160,157,222
+Lotus,136,133,190
+Lotus,108,106,153
+Lotus,78,77,114
+Lotus,53,53,81
+Lotus,167,163,230
+Lotus,145,143,203
+Lotus,119,117,167
+Lotus,90,89,129
+Lotus,63,62,93
+Lotus,191,146,195
+Lotus,170,129,176
+Lotus,146,107,153
+Lotus,122,85,131
+Lotus,101,66,112
+Lotus,197,152,201
+Lotus,179,137,184
+Lotus,156,116,163
+Lotus,132,94,140
+Lotus,109,74,119
+Lotus,108,121,174
+Lotus,99,112,161
+Lotus,88,101,145
+Lotus,76,88,128
+Lotus,67,78,114
+Lotus,111,125,179
+Lotus,103,117,168
+Lotus,92,105,151
+Lotus,81,93,135
+Lotus,70,82,119
+Lotus,152,224,230
+Lotus,133,199,212
+Lotus,109,170,190
+Lotus,85,140,168
+Lotus,65,113,149
+Lotus,157,231,235
+Lotus,141,210,220
+Lotus,118,182,200
+Lotus,94,151,176
+Lotus,72,123,156
+Orokin,96,93,85
+Orokin,106,103,93
+Orokin,118,116,106
+Orokin,133,131,118
+Orokin,147,146,131
+Orokin,107,104,94
+Orokin,120,117,107
+Orokin,135,132,119
+Orokin,148,147,133
+Orokin,161,159,145
+Orokin,184,164,141
+Orokin,186,166,144
+Orokin,190,171,148
+Orokin,195,176,155
+Orokin,200,180,161
+Orokin,186,166,143
+Orokin,190,171,148
+Orokin,194,176,154
+Orokin,199,180,160
+Orokin,204,184,165
+Orokin,154,146,51
+Orokin,166,157,60
+Orokin,181,172,73
+Orokin,200,190,86
+Orokin,218,208,102
+Orokin,165,156,58
+Orokin,179,171,71
+Orokin,198,188,85
+Orokin,216,206,100
+Orokin,234,224,115
+Orokin,255,209,11
+Orokin,253,212,34
+Orokin,251,217,66
+Orokin,248,221,103
+Orokin,246,227,140
+Orokin,253,211,30
+Orokin,251,216,62
+Orokin,249,221,98
+Orokin,246,226,136
+Orokin,244,231,172
+Orokin,255,185,10
+Orokin,253,190,26
+Orokin,251,195,49
+Orokin,249,201,74
+Orokin,247,206,101
+Orokin,254,189,23
+Orokin,252,194,46
+Orokin,249,200,71
+Orokin,247,206,98
+Orokin,245,211,123
+Orokin,238,238,218
+Orokin,240,240,223
+Orokin,242,242,228
+Orokin,246,244,236
+Orokin,249,249,241
+Orokin,240,240,222
+Orokin,242,241,228
+Orokin,244,244,234
+Orokin,248,248,240
+Orokin,251,251,247
+Orokin,84,201,219
+Orokin,76,206,223
+Orokin,65,210,228
+Orokin,54,216,233
+Orokin,43,221,239
+Orokin,79,203,221
+Orokin,69,208,225
+Orokin,58,212,232
+Orokin,47,220,237
+Orokin,36,225,240
+Orokin,10,182,229
+Orokin,23,187,232
+Orokin,41,196,235
+Orokin,62,205,239
+Orokin,84,214,243
+Orokin,22,187,231
+Orokin,39,195,234
+Orokin,59,204,239
+Orokin,82,212,242
+Orokin,102,222,247
+Orokin,58,133,190
+Orokin,45,154,197
+Orokin,54,174,210
+Orokin,46,194,221
+Orokin,38,216,230
+Orokin,48,158,202
+Orokin,52,177,212
+Orokin,45,199,222
+Orokin,22,231,238
+Orokin,14,255,249
+RWB,225,17,21
+RWB,254,255,255
+RWB,225,17,21
+RWB,255,255,255
+RWB,225,17,21
+RWB,223,18,23
+RWB,253,253,255
+RWB,224,17,22
+RWB,254,254,255
+RWB,225,17,21
+RWB,220,19,24
+RWB,250,252,255
+RWB,222,18,23
+RWB,252,253,254
+RWB,223,17,23
+RWB,216,20,27
+RWB,248,250,254
+RWB,218,20,25
+RWB,249,251,254
+RWB,219,19,25
+RWB,212,22,29
+RWB,245,249,254
+RWB,214,21,28
+RWB,247,249,254
+RWB,217,20,27
+RWB,208,23,33
+RWB,242,246,253
+RWB,210,22,31
+RWB,245,248,253
+RWB,213,22,29
+RWB,204,25,36
+RWB,239,244,252
+RWB,206,24,34
+RWB,241,246,253
+RWB,207,23,33
+RWB,199,27,38
+RWB,236,242,252
+RWB,201,25,36
+RWB,239,244,253
+RWB,203,25,35
+RWB,194,28,42
+RWB,233,241,252
+RWB,197,28,40
+RWB,235,242,252
+RWB,199,27,38
+RWB,190,30,44
+RWB,230,238,252
+RWB,192,29,43
+RWB,233,240,252
+RWB,194,28,41
+RWB,186,32,47
+RWB,227,236,251
+RWB,188,30,45
+RWB,230,238,251
+RWB,189,30,45
+RWB,183,32,49
+RWB,224,235,250
+RWB,184,32,48
+RWB,227,236,251
+RWB,186,31,47
+RWB,180,33,51
+RWB,223,233,251
+RWB,181,33,50
+RWB,224,235,251
+RWB,182,32,50
+RWB,54,66,141
+RWB,55,64,131
+RWB,57,62,123
+RWB,59,60,117
+RWB,60,59,111
+RWB,52,67,148
+RWB,54,65,139
+RWB,56,63,131
+RWB,57,62,122
+RWB,59,60,115
+RWB,50,68,155
+RWB,52,67,146
+RWB,54,65,138
+RWB,56,63,129
+RWB,58,61,120
+RWB,49,69,161
+RWB,50,67,153
+RWB,53,66,145
+RWB,54,64,135
+RWB,56,62,127
+RWB,48,70,166
+RWB,50,69,160
+RWB,51,67,151
+RWB,53,65,143
+RWB,55,64,133
+Shamrock,255,211,147
+Shamrock,254,198,115
+Shamrock,254,184,81
+Shamrock,254,171,49
+Shamrock,253,160,21
+Shamrock,255,218,163
+Shamrock,254,206,134
+Shamrock,254,193,101
+Shamrock,254,179,68
+Shamrock,253,166,37
+Shamrock,255,223,177
+Shamrock,255,213,152
+Shamrock,254,201,121
+Shamrock,254,187,88
+Shamrock,254,174,55
+Shamrock,255,119,0
+Shamrock,255,102,0
+Shamrock,255,84,0
+Shamrock,255,67,0
+Shamrock,255,52,0
+Shamrock,255,128,0
+Shamrock,255,113,0
+Shamrock,255,95,0
+Shamrock,255,77,0
+Shamrock,255,61,0
+Shamrock,255,136,0
+Shamrock,255,122,0
+Shamrock,255,106,0
+Shamrock,255,88,0
+Shamrock,255,70,0
+Shamrock,75,239,111
+Shamrock,59,221,95
+Shamrock,42,200,77
+Shamrock,25,179,60
+Shamrock,11,162,44
+Shamrock,84,250,120
+Shamrock,71,235,107
+Shamrock,55,216,91
+Shamrock,38,195,73
+Shamrock,22,175,55
+Shamrock,88,255,125
+Shamrock,81,247,118
+Shamrock,67,230,104
+Shamrock,51,210,86
+Shamrock,34,189,68
+Shamrock,3,224,47
+Shamrock,5,200,42
+Shamrock,7,174,37
+Shamrock,9,149,31
+Shamrock,11,128,27
+Shamrock,2,237,50
+Shamrock,3,215,45
+Shamrock,6,189,40
+Shamrock,8,163,35
+Shamrock,10,140,30
+Shamrock,1,247,52
+Shamrock,2,228,48
+Shamrock,4,205,43
+Shamrock,6,179,38
+Shamrock,9,153,32
+Shamrock,39,170,65
+Shamrock,43,146,63
+Shamrock,48,122,61
+Shamrock,51,102,59
+Shamrock,54,88,58
+Shamrock,36,187,67
+Shamrock,40,164,65
+Shamrock,44,140,63
+Shamrock,49,117,61
+Shamrock,52,98,59
+Shamrock,33,200,68
+Shamrock,37,181,67
+Shamrock,41,158,64
+Shamrock,45,134,62
+Shamrock,50,111,60
+Shamrock,27,31,117
+Shamrock,21,24,112
+Shamrock,15,17,106
+Shamrock,9,10,100
+Shamrock,3,4,95
+Shamrock,32,38,122
+Shamrock,28,32,118
+Shamrock,22,26,113
+Shamrock,16,19,107
+Shamrock,10,11,101
+Shamrock,19,81,178
+Shamrock,16,68,164
+Shamrock,11,49,144
+Shamrock,7,30,123
+Shamrock,3,12,105
+Smoke,221,222,222
+Smoke,224,226,226
+Smoke,228,229,229
+Smoke,239,240,240
+Smoke,249,249,249
+Smoke,203,205,205
+Smoke,210,211,211
+Smoke,216,217,217
+Smoke,228,229,229
+Smoke,239,240,240
+Smoke,189,192,192
+Smoke,196,199,199
+Smoke,203,205,205
+Smoke,215,216,216
+Smoke,224,226,226
+Smoke,174,177,178
+Smoke,183,185,185
+Smoke,190,193,193
+Smoke,201,204,204
+Smoke,211,212,212
+Smoke,163,166,167
+Smoke,167,170,171
+Smoke,177,179,179
+Smoke,188,190,190
+Smoke,195,198,198
+Smoke,155,157,159
+Smoke,160,162,163
+Smoke,163,166,167
+Smoke,173,176,177
+Smoke,181,183,183
+Smoke,140,144,145
+Smoke,146,149,150
+Smoke,150,153,154
+Smoke,159,161,162
+Smoke,166,168,170
+Smoke,118,122,123
+Smoke,125,128,129
+Smoke,128,132,133
+Smoke,137,141,143
+Smoke,146,149,150
+Smoke,101,104,105
+Smoke,107,110,112
+Smoke,112,116,117
+Smoke,120,125,126
+Smoke,128,132,133
+Smoke,77,81,84
+Smoke,86,90,91
+Smoke,91,95,96
+Smoke,98,104,105
+Smoke,105,109,111
+Smoke,64,66,67
+Smoke,70,74,76
+Smoke,76,79,81
+Smoke,84,87,88
+Smoke,87,91,92
+Smoke,47,49,50
+Smoke,55,59,60
+Smoke,61,64,65
+Smoke,65,68,70
+Smoke,72,76,77
+Smoke,31,34,34
+Smoke,40,43,44
+Smoke,46,48,49
+Smoke,51,53,54
+Smoke,54,58,59
+Smoke,15,17,17
+Smoke,23,26,26
+Smoke,28,31,31
+Smoke,33,35,36
+Smoke,36,39,41
+Smoke,7,11,11
+Smoke,19,21,21
+Smoke,24,26,26
+Smoke,27,30,30
+Smoke,30,32,32
+Smoke,6,7,7
+Smoke,15,17,17
+Smoke,18,21,21
+Smoke,22,24,24
+Smoke,24,27,27
+Smoke,3,4,4
+Smoke,11,12,12
+Smoke,16,17,17
+Smoke,20,21,21
+Smoke,21,22,22
+Smoke,0,0,0
+Smoke,10,11,11
+Smoke,13,15,15
+Smoke,17,18,18
+Smoke,18,20,20
+Storm,223,64,25
+Storm,228,91,57
+Storm,229,102,71
+Storm,248,111,77
+Storm,255,137,106
+Storm,230,99,50
+Storm,233,120,78
+Storm,235,131,90
+Storm,254,141,97
+Storm,255,169,134
+Storm,239,165,94
+Storm,241,177,115
+Storm,243,182,125
+Storm,255,197,143
+Storm,255,217,179
+Storm,245,199,116
+Storm,246,207,135
+Storm,247,211,144
+Storm,255,225,167
+Storm,255,241,196
+Storm,222,183,111
+Storm,226,193,131
+Storm,228,198,140
+Storm,246,214,151
+Storm,255,231,181
+Storm,151,139,99
+Storm,166,156,120
+Storm,172,162,130
+Storm,186,176,140
+Storm,205,197,159
+Storm,93,103,85
+Storm,116,124,109
+Storm,125,132,119
+Storm,135,142,129
+Storm,155,163,148
+Storm,66,74,69
+Storm,92,99,94
+Storm,103,110,105
+Storm,111,119,114
+Storm,130,138,133
+Storm,18,28,33
+Storm,50,58,63
+Storm,64,72,77
+Storm,69,79,84
+Storm,85,96,101
+Storm,0,2,10
+Storm,27,37,48
+Storm,43,51,63
+Storm,47,55,68
+Storm,60,68,83
+Storm,16,0,7
+Storm,53,29,40
+Storm,68,45,55
+Storm,73,49,60
+Storm,89,63,76
+Storm,56,0,1
+Storm,83,33,36
+Storm,95,49,51
+Storm,103,53,55
+Storm,121,67,69
+Storm,77,0,0
+Storm,101,32,32
+Storm,112,48,48
+Storm,121,52,52
+Storm,140,66,66
+Storm,79,10,1
+Storm,103,44,36
+Storm,114,59,51
+Storm,123,64,55
+Storm,142,79,69
+Storm,103,72,0
+Storm,132,101,26
+Storm,141,112,43
+Storm,152,119,46
+Storm,173,140,60
+Storm,93,92,20
+Storm,115,114,52
+Storm,125,124,66
+Storm,135,134,71
+Storm,154,153,87
+Storm,174,139,0
+Storm,185,155,23
+Storm,190,162,39
+Storm,205,175,42
+Storm,224,194,54
+Storm,255,170,0
+Storm,255,182,0
+Storm,255,201,12
+Storm,255,217,13
+Storm,255,235,19
+Tenno,220,204,154
+Tenno,131,104,79
+Tenno,145,154,156
+Tenno,1,179,108
+Tenno,63,123,193
+Tenno,108,108,108
+Tenno,86,123,141
+Tenno,208,208,208
+Tenno,248,207,111
+Tenno,6,70,97
+Tenno,188,158,101
+Tenno,186,186,186
+Tenno,125,123,120
+Tenno,247,120,15
+Tenno,255,114,1
+Tenno,179,179,179
+Tenno,83,83,83
+Tenno,104,104,104
+Tenno,154,43,35
+Tenno,1,88,255
+Tenno,255,255,255
+Tenno,69,125,158
+Tenno,93,108,111
+Tenno,196,179,136
+Tenno,2,52,183
+Tenno,176,189,184
+Tenno,125,111,101
+Tenno,39,120,131
+Tenno,181,69,66
+Tenno,255,255,255
+Tenno,97,123,145
+Tenno,123,189,215
+Tenno,111,79,59
+Tenno,46,255,241
+Tenno,72,218,225
+Tenno,131,152,176
+Tenno,79,84,97
+Tenno,120,120,128
+Tenno,104,55,60
+Tenno,255,138,1
+Tenno,233,228,218
+Tenno,125,136,148
+Tenno,160,111,80
+Tenno,138,133,128
+Tenno,1,75,191
+Tenno,128,128,128
+Tenno,65,66,62
+Tenno,84,188,176
+Tenno,49,184,145
+Tenno,1,88,255
+Tenno,236,228,218
+Tenno,66,83,78
+Tenno,31,45,60
+Tenno,233,251,16
+Tenno,1,184,255
+Tenno,158,143,101
+Tenno,75,101,117
+Tenno,234,205,117
+Tenno,186,186,186
+Tenno,0,97,242
+Tenno,114,138,156
+Tenno,232,233,210
+Tenno,82,79,75
+Tenno,170,141,156
+Tenno,70,13,174
+Tenno,250,77,64
+Tenno,148,143,141
+Tenno,101,97,93
+Tenno,64,133,202
+Tenno,0,93,253
+Tenno,78,73,71
+Tenno,236,117,70
+Tenno,12,189,176
+Tenno,247,232,183
+Tenno,253,104,46
+Tenno,120,133,136
+Tenno,78,75,70
+Tenno,198,101,80
+Tenno,248,228,194
+Tenno,40,13,174
+Tenno,65,103,92
+Tenno,145,111,79
+Tenno,93,97,83
+Tenno,193,138,61
+Tenno,244,0,0
+Tenno,93,101,114
+Tenno,246,242,228
+Tenno,108,179,247
+Tenno,232,125,150
+Tenno,128,183,226
+Twilight,120,71,18
+Twilight,104,59,19
+Twilight,86,47,19
+Twilight,70,35,20
+Twilight,59,27,20
+Twilight,164,139,118
+Twilight,132,109,91
+Twilight,97,74,60
+Twilight,65,44,33
+Twilight,43,23,14
+Twilight,220,207,127
+Twilight,192,173,108
+Twilight,159,135,87
+Twilight,131,101,68
+Twilight,111,78,55
+Twilight,231,219,187
+Twilight,209,181,137
+Twilight,186,139,83
+Twilight,164,101,33
+Twilight,150,75,0
+Twilight,210,180,140
+Twilight,198,164,121
+Twilight,179,140,94
+Twilight,159,113,63
+Twilight,140,89,36
+Twilight,245,222,179
+Twilight,224,201,156
+Twilight,194,170,123
+Twilight,159,136,86
+Twilight,129,105,53
+Twilight,194,178,128
+Twilight,177,167,117
+Twilight,153,151,102
+Twilight,126,133,84
+Twilight,102,117,69
+Twilight,224,166,93
+Twilight,215,143,79
+Twilight,202,112,59
+Twilight,188,78,38
+Twilight,176,48,20
+Twilight,204,119,34
+Twilight,195,101,34
+Twilight,181,74,33
+Twilight,167,45,33
+Twilight,153,18,32
+Twilight,183,145,248
+Twilight,167,126,233
+Twilight,144,97,212
+Twilight,118,65,188
+Twilight,95,36,167
+Twilight,205,159,227
+Twilight,189,148,220
+Twilight,165,133,209
+Twilight,138,116,197
+Twilight,114,101,186
+Twilight,187,112,225
+Twilight,160,96,192
+Twilight,129,78,155
+Twilight,102,61,122
+Twilight,83,50,99
+Twilight,181,175,248
+Twilight,161,152,222
+Twilight,133,121,187
+Twilight,104,87,149
+Twilight,77,57,116
+Twilight,170,93,227
+Twilight,144,84,202
+Twilight,116,74,174
+Twilight,90,64,149
+Twilight,72,58,132
+Twilight,126,10,199
+Twilight,112,14,193
+Twilight,92,20,183
+Twilight,70,26,173
+Twilight,49,32,163
+Twilight,95,10,199
+Twilight,81,13,183
+Twilight,59,18,159
+Twilight,36,23,132
+Twilight,14,28,108
+Twilight,158,22,225
+Twilight,134,16,192
+Twilight,107,10,155
+Twilight,83,4,122
+Twilight,67,0,100
+Twilight,176,70,227
+Twilight,142,52,187
+Twilight,106,31,142
+Twilight,72,13,102
+Twilight,50,0,74
+Valentine,118,3,3
+Valentine,139,23,23
+Valentine,162,42,42
+Valentine,176,59,59
+Valentine,202,69,69
+Valentine,165,7,7
+Valentine,181,28,28
+Valentine,197,48,48
+Valentine,207,66,66
+Valentine,236,77,77
+Valentine,187,8,18
+Valentine,199,30,42
+Valentine,212,51,66
+Valentine,219,69,85
+Valentine,249,81,100
+Valentine,230,12,47
+Valentine,235,35,73
+Valentine,240,57,100
+Valentine,243,75,119
+Valentine,255,88,138
+Valentine,255,13,67
+Valentine,255,36,92
+Valentine,255,59,119
+Valentine,255,78,137
+Valentine,255,92,159
+Valentine,254,28,80
+Valentine,254,52,104
+Valentine,254,77,130
+Valentine,254,96,147
+Valentine,255,112,169
+Valentine,244,99,136
+Valentine,246,122,156
+Valentine,248,147,176
+Valentine,249,163,189
+Valentine,255,188,217
+Valentine,240,139,162
+Valentine,243,157,178
+Valentine,246,177,195
+Valentine,248,190,205
+Valentine,255,218,234
+Valentine,225,118,140
+Valentine,231,139,158
+Valentine,237,162,178
+Valentine,240,176,190
+Valentine,255,202,218
+Valentine,174,54,59
+Valentine,188,79,84
+Valentine,203,106,111
+Valentine,212,125,130
+Valentine,242,145,151
+Valentine,154,30,30
+Valentine,170,55,55
+Valentine,188,81,81
+Valentine,199,100,100
+Valentine,227,116,116
+Valentine,154,43,43
+Valentine,170,68,68
+Valentine,188,95,95
+Valentine,199,114,114
+Valentine,227,132,132
+Valentine,154,70,71
+Valentine,170,95,96
+Valentine,188,122,123
+Valentine,199,140,141
+Valentine,227,162,163
+Valentine,154,87,87
+Valentine,170,111,111
+Valentine,188,137,137
+Valentine,199,154,154
+Valentine,227,177,177
+Valentine,127,68,69
+Valentine,147,93,94
+Valentine,169,120,121
+Valentine,183,138,139
+Valentine,210,160,161
+Valentine,41,11,11
+Valentine,66,33,33
+Valentine,93,55,55
+Valentine,112,73,73
+Valentine,130,86,86
+Valentine,15,0,0
+Valentine,38,12,12
+Valentine,61,26,26
+Valentine,80,40,40
+Valentine,94,47,47
+Valentine,31,0,0
+Valentine,56,14,15
+Valentine,82,29,30
+Valentine,101,44,45
+Valentine,117,51,52
+</script>
+<style>
+:root {
+  --palette-scale: 2;
+  --palette-size: 256px;
+  --palette-steps: 256;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font: 14px "Segoe UI", sans-serif;
+  background: #999;
+}
+input {
+  font: 13px "Consolas", monospace;
+}
+.palette-block {
+  position: relative;
+  width: calc(var(--palette-size) * var(--palette-scale));
+  height: calc(var(--palette-size) * var(--palette-scale));
+}
+#palette {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.line {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border: solid 1px #000;
+  pointer-events: none;
+}
+.line-h {
+  width: 100%;
+}
+.line-v {
+  height: 100%;
+}
+.input {
+  display: flex;
+}
+.input label {
+  width: 70px;
+}
+.input span {
+  width: 16px;
+}
+.input input[type=number] {
+  width: calc(3ch + 20px);
+}
+.color-preview {
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+</style>
+<style id="style"></style>
+<div id="inputs"></div>
+<div id="match"></div>
+<div class="palette-block">
+  <canvas id="palette" width="512" height="512"></canvas>
+  <div class="line line-h"></div>
+  <div class="line line-v"></div>
+</div>
+<script id="vs" type="x-shader/x-vertex">#version 300 es
+in vec3 aPosition;
+out vec3 vPosition;
+
+void main() {
+  gl_Position = vec4(aPosition * 2.0 - vec3(1.0), 1.0);
+  //gl_Position = vec4(aPosition, 1.0);
+  vPosition = aPosition;
+}
+</script>
+<script id="fs" type="x-shader/x-fragment">#version 300 es
+precision mediump float;
+//uniform float uTime;
+uniform float uLightness;
+uniform float uConstraint;
+uniform int uPaletteMask;
+uniform sampler2D uPaletteSampler;
+in vec3 vPosition;
+out vec4 glFragColor;
+
+float hue2rgb(float p, float q, float t) {
+  if (t < 0.0)
+    t += 1.0;
+  if (t > 1.0)
+    t -= 1.0;
+  if (6.0 * t < 1.0)
+    return p + (q - p) * 6.0 * t;
+  if (2.0 * t < 1.0)
+    return q;
+  if (3.0 * t < 2.0)
+    return p + (q - p) * (2.0 / 3.0 - t) * 6.0;
+  return p;
+}
+
+vec3 hsl2rgb(vec3 hsl) {
+  if (hsl.y == 0.0)
+    return vec3(hsl.z);
+  float q = hsl.z < 0.5 ? hsl.z * (1.0 + hsl.y) : hsl.z + hsl.y - hsl.y * hsl.z;
+  float p = 2.0 * hsl.z - q;
+  return vec3(hue2rgb(p, q, hsl.x + 1.0 / 3.0), hue2rgb(p, q, hsl.x), hue2rgb(p, q, hsl.x - 1.0 / 3.0));
+}
+
+vec3 rgb2lab(vec3 rgb) {
+  float r = rgb.r;
+  float g = rgb.g;
+  float b = rgb.b;
+  r = 100.0 * (r > 0.04045 ? pow((r + 0.055) / 1.055, 2.4) : r / 12.92);
+  g = 100.0 * (g > 0.04045 ? pow((g + 0.055) / 1.055, 2.4) : g / 12.92);
+  b = 100.0 * (b > 0.04045 ? pow((b + 0.055) / 1.055, 2.4) : b / 12.92);
+  float xr = (0.4124 * r + 0.3576 * g + 0.1805 * b) / 95.047;
+  float yr = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 100.0;
+  float zr = (0.0193 * r + 0.1192 * g + 0.9505 * b) / 108.883;
+  xr = xr > 0.008856 ? pow(xr, 1.0 / 3.0) : (7.787 * xr + 16.0 / 116.0);
+  yr = yr > 0.008856 ? pow(yr, 1.0 / 3.0) : (7.787 * yr + 16.0 / 116.0);
+  zr = zr > 0.008856 ? pow(zr, 1.0 / 3.0) : (7.787 * zr + 16.0 / 116.0);
+  return vec3((116.0 * yr - 16.0) / 100.0, (500.0 * (xr - yr)) / 127.0, (200.0 * (yr - zr)) / 127.0);
+}
+
+void main() {
+  vec3 perfectColorHsl = vec3(vPosition.x, vPosition.y, uLightness);
+  vec3 perfectColorRgb = hsl2rgb(perfectColorHsl);
+  vec3 perfectColorLab = rgb2lab(perfectColorRgb);
+  vec3 paletteColorRgb = vec3(0);
+  float minDistance = 999.0;
+  bool searchFinished = false;
+  for (int y = 0; y < 9; y++) {
+    for (int x = 0; x < 256; x++) {
+      if ((uPaletteMask & 1 << ((y * 256 + x) / 90)) == 0)
+        continue;
+      float tx = (float(x) + 0.5) / 256.0;
+      float ty = (float(y) * 2.0 + 0.5) / 32.0;
+      vec4 paletteRgba = texture(uPaletteSampler, vec2(tx, ty));
+      if (paletteRgba.a == 0.0) {
+        searchFinished = true;
+        break;
+      }
+      vec3 paletteLab = texture(uPaletteSampler, vec2(tx, ty + 1.0 / 32.0)).rgb + vec3(0.0, -0.5, -0.5);
+      //vec3 paletteLab = rgb2lab(paletteRgba.rgb);
+      //float curDistance = distance(perfectColorLab, paletteLab * vec3(1.0, 2.0, 2.0)); // matches js without 0.5 mult on a & b deltas
+      float curDistance = distance(perfectColorLab * vec3(1.0, 0.5, 0.5), paletteLab);
+      //float curDistance = distance(perfectColorLab, paletteLab);
+      if (curDistance < minDistance) {
+        minDistance = curDistance;
+        paletteColorRgb = paletteRgba.rgb;
+      }
+    }
+    if (searchFinished)
+      break;
+  }
+  glFragColor = vec4(perfectColorRgb * (1.0 - uConstraint) + paletteColorRgb * uConstraint, 1.0);
+  //glFragColor = texture2D(uPaletteSampler, vec2(vPosition.x, vPosition.y));
+}
+</script>
+<script>
+
+const time0 = (new Date()).getTime() / 1000;
+let paletteMask = 0xFFFFFFFF;
+
+function glLoadTexture(gl, url) {
+  let texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([0, 0, 0, 0]));
+  let image = new Image();
+  image.onload = function() {
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+  };
+  image.src = url;
+  return texture;
+}
+
+function glAddShader(gl, program, type, src) {
+  let shader = gl.createShader(type);
+  gl.shaderSource(shader, src);
+  gl.compileShader(shader);
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
+    throw "Cannot compile shader:\n\n" + gl.getShaderInfoLog(shader);
+  gl.attachShader(program, shader);
+}
+
+function glInit(gl, vertexShader, fragmentShader) {
+  let program = gl.createProgram();
+  glAddShader(gl, program, gl.VERTEX_SHADER, vertexShader);
+  glAddShader(gl, program, gl.FRAGMENT_SHADER, fragmentShader);
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS))
+    throw "Could not link the shader program!";
+  gl.useProgram(program);
+
+  // Create a square as a strip of two triangles
+  let paletteTexture = glLoadTexture(gl, "wfpal-all.png");
+  let buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0]), gl.STATIC_DRAW);
+  gl.aPosition = gl.getAttribLocation(program, 'aPosition');
+  gl.enableVertexAttribArray(gl.aPosition);
+  gl.vertexAttribPointer(gl.aPosition, 3, gl.FLOAT, false, 0, 0);
+  gl.uPaletteSampler = gl.getUniformLocation(program, 'uPaletteSampler');
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, paletteTexture);
+  gl.uniform1i(gl.uPaletteSampler, 0);
+  gl.uConstraint = gl.getUniformLocation(program, 'uConstraint');
+  gl.uLightness = gl.getUniformLocation(program, 'uLightness');
+  gl.uPaletteMask = gl.getUniformLocation(program, 'uPaletteMask');
+  //gl.uTime = gl.getUniformLocation(program, "uTime");
+  //gl.uCursor = gl.getUniformLocation(program, "uCursor");
+}
+
+function glUpdate(gl) {
+  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+  //gl.uniform1f(gl.uTime, (new Date()).getTime() / 1000 - time0);
+  //gl.uniform3f(gl.uCursor, gl.cursor.x, gl.cursor.y, gl.cursor.z);
+  gl.uniform1f(gl.uConstraint, inputs.constraint.value / 100);
+  gl.uniform1f(gl.uLightness, inputs.lightness.value / 255);
+  gl.uniform1i(gl.uPaletteMask, paletteMask);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  requestAnimFrame(function() { glUpdate(gl); });
+}
+
+function glStart(canvas, vertexShader, fragmentShader) {
+  try {
+    var gl = canvas.getContext("webgl2", { antialias: false });
+    canvas.gl = gl;
+  }
+  catch (e) {
+    throw "WebGL not supported.";
+  }
+
+  let setMouse = z => {
+    var r = event.target.getBoundingClientRect();
+    gl.cursor.x = (event.clientX - r.left  ) / (r.right - r.left) * 2 - 1;
+    gl.cursor.y = (event.clientY - r.bottom) / (r.top - r.bottom) * 2 - 1;
+    gl.cursor.z = z;
+  };
+  canvas.onmousedown = e => setMouse(1);
+  canvas.onmousemove = e => setMouse(0);
+  canvas.onmouseup   = e => setMouse(-1);
+  gl.cursor = { x: 0, y: 0, z: 0 };
+
+  glInit(gl, vertexShader, fragmentShader);
+  glUpdate(gl);
+}
+
+function hue2rgb(p, q, t) {
+  if (t < 0.0)
+    t += 1.0;
+  if (t > 1.0)
+    t -= 1.0;
+  if (6.0 * t < 1.0)
+    return p + (q - p) * 6.0 * t;
+  if (2.0 * t < 1.0)
+    return q;
+  if (3.0 * t < 2.0)
+    return p + (q - p) * (2.0 / 3.0 - t) * 6.0;
+  return p;
+}
+
+function hsl2rgb(hsl) {
+  if (hsl[1] == 0.0)
+    return [ hsl[2], hsl[2], hsl[2] ];
+  let q = hsl[2] < 0.5 ? hsl[2] * (1.0 + hsl[1]) : hsl[2] + hsl[1] - hsl[1] * hsl[2];
+  let p = 2.0 * hsl[2] - q;
+  return [ hue2rgb(p, q, hsl[0] + 1.0 / 3.0), hue2rgb(p, q, hsl[0]), hue2rgb(p, q, hsl[0] - 1.0 / 3.0) ];
+}
+
+function rgb2hsl(rgb) {
+  let r = rgb[0];
+  let g = rgb[1];
+  let b = rgb[2];
+  let max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+  if (max == min) {
+    h = s = 0;
+  }
+  else {
+    let d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  return [h, s, l];
+}
+
+function rgb2lab(rgb) {
+  let r = rgb[0];
+  let g = rgb[1];
+  let b = rgb[2];
+  r = 100.0 * (r > 0.04045 ? Math.pow((r + 0.055) / 1.055, 2.4) : r / 12.92);
+  g = 100.0 * (g > 0.04045 ? Math.pow((g + 0.055) / 1.055, 2.4) : g / 12.92);
+  b = 100.0 * (b > 0.04045 ? Math.pow((b + 0.055) / 1.055, 2.4) : b / 12.92);
+  let xr = (0.4124 * r + 0.3576 * g + 0.1805 * b) / 95.047;
+  let yr = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 100.0;
+  let zr = (0.0193 * r + 0.1192 * g + 0.9505 * b) / 108.883;
+  xr = xr > 0.008856 ? Math.pow(xr, 1.0 / 3.0) : (7.787 * xr + 16.0 / 116.0);
+  yr = yr > 0.008856 ? Math.pow(yr, 1.0 / 3.0) : (7.787 * yr + 16.0 / 116.0);
+  zr = zr > 0.008856 ? Math.pow(zr, 1.0 / 3.0) : (7.787 * zr + 16.0 / 116.0);
+  return [ (116.0 * yr - 16.0) / 100.0, (500.0 * (xr - yr)) / 127.0, (200.0 * (yr - zr)) / 127.0 ];
+}
+
+requestAnimFrame =
+  (function() {
+    return requestAnimationFrame || webkitRequestAnimationFrame || mozRequestAnimationFrame || oRequestAnimationFrame || msRequestAnimationFrame ||
+      function(callback) { setTimeout(callback, 1000 / 60); }; }
+  )();
+
+let inputs = {
+  scale: {
+    label: "Scale", unit: "%",
+    min: 100, max: 500, step: 10,
+    value: 200,
+  },
+  constraint: {
+    label: "Constraint", unit: "%",
+    min: 0, max: 100, step: 1,
+    value: 50,
+  },
+  hue: {
+    label: "H", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+  saturation: {
+    label: "S", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+  lightness: {
+    label: "L", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+  red: {
+    label: "R", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+  green: {
+    label: "G", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+  blue: {
+    label: "B", unit: "",
+    min: 0, max: 255, step: 1,
+    value: 127,
+  },
+};
+let colors = document.querySelector('#palettesCsv').text.trim().replace("\r", "").split("\n").map(s => s.split(",")).map((p, i) => ({
+  paletteName: p[0],
+  index: i,
+  rgb: [ p[1] / 255, p[2] / 255, p[3] / 255 ],
+})).map(c => ({
+  paletteName: c.paletteName,
+  index: c.index,
+  rgb: c.rgb,
+  lab: rgb2lab(c.rgb),
+}));
+let inputsDiv = document.querySelector('#inputs');
+for (let [inputId, input] of Object.entries(inputs)) {
+  inputsDiv.insertAdjacentHTML('beforeend', `
+    <div class="input input-${inputId}">
+      <label>${input.label}</label>
+      <input id="${inputId}n" type="number" min="${input.min}" max="${input.max}" step="${input.step}" value="${input.value}">
+      <span>${input.unit}</span>
+      <input id="${inputId}r" type="range" min="${input.min}" max="${input.max}" step="${input.step}" value="${input.value}">
+    </div>
+  `);
+  let inputNumber = document.querySelector(`#${inputId}n`);
+  let inputRange = document.querySelector(`#${inputId}r`);
+  input.onchange = () => {};
+  Object.defineProperty(input, 'value', {
+    get() { return inputRange.value; },
+    set(v) {
+      inputNumber.value = inputRange.value = v;
+      input.onchange(null);
+    },
+  });
+  inputNumber.oninput = e => {
+    input.value = inputRange.value = inputNumber.value;
+    input.onchange(e);
+  };
+  inputRange.oninput = e => {
+    input.value = inputNumber.value = inputRange.value;
+    input.onchange(e);
+  };
+}
+inputsDiv.insertAdjacentHTML('beforeend', `<div id="options"></div>`);
+let optionsDiv = document.querySelector('#options');
+inputs.options = {
+  palettes: [],
+  onchange: () => {},
+}
+for (let i = 0; i < colors.length; i += 90) {
+  let paletteName = colors[i].paletteName;
+  let paletteId = paletteName.toLowerCase();
+  optionsDiv.insertAdjacentHTML('beforeend', `
+    <span class="option">
+      <label>
+        <input id="${paletteId}" class="palette-check" type="checkbox" checked>
+        ${paletteName}
+      </label>
+    </span>
+  `);
+  let index = inputs.options.palettes.length;
+  inputs.options.palettes.push(true);
+  let paletteCheck = document.querySelector(`#${paletteId}`);
+  paletteCheck.onchange = e => {
+    inputs.options.palettes[index] = paletteCheck.checked;
+    inputs.options.onchange(e);
+  };
+}
+let paletteCanvas = document.querySelector('#palette');
+let style = document.querySelector('#style');
+let updateStyle = () => {
+  style.innerHTML = `
+    :root {
+      --palette-scale: ${inputs.scale.value / 100};
+    }
+    .line-h {
+      bottom: calc(var(--palette-size) * var(--palette-scale) * ${inputs.saturation.value / 255} - 1px);
+    }
+    .line-v {
+      left: calc(var(--palette-size) * var(--palette-scale) * ${inputs.hue.value / 255} - 1px);
+    }
+  `;
+  paletteCanvas.width = paletteCanvas.height = parseInt(256 * inputs.scale.value / 100);
+};
+let match = document.querySelector('#match');
+let updatingColors = null;
+let updateColorValues = (e, mode) => {
+  if (updatingColors != null || paletteMask == 0)
+    return;
+  updatingColors = mode;
+  if (mode == 'hsl') {
+    var perfectColorHsl = e !== null && e.offsetX !== undefined
+      ? [ e.offsetX / inputs.scale.value / 2.55, 1 - e.offsetY / inputs.scale.value / 2.55, inputs.lightness.value / 255 ]
+      : [ inputs.hue.value / 255, inputs.saturation.value / 255, inputs.lightness.value / 255 ];
+    var perfectColorRgb = hsl2rgb(perfectColorHsl);
+  }
+  else {
+    var perfectColorRgb = [ inputs.red.value / 255, inputs.green.value / 255, inputs.blue.value / 255 ];
+    var perfectColorHsl = rgb2hsl(perfectColorRgb);
+  }
+  let perfectColorLab = rgb2lab(perfectColorRgb);
+  inputs.hue.value = parseInt(perfectColorHsl[0] * 255);
+  inputs.saturation.value = parseInt(perfectColorHsl[1] * 255);
+  inputs.lightness.value = parseInt(perfectColorHsl[2] * 255);
+  inputs.red.value = parseInt(perfectColorRgb[0] * 255);
+  inputs.green.value = parseInt(perfectColorRgb[1] * 255);
+  inputs.blue.value = parseInt(perfectColorRgb[2] * 255);
+  let minDistance = 999;
+  let paletteColor = null;
+  for (let i = 0; i < colors.length; i++) {
+    if ((paletteMask & 1 << (i / 90)) == 0)
+      continue;
+    let d1 = perfectColorLab[0] - colors[i].lab[0];
+    let d2 = (perfectColorLab[1] - colors[i].lab[1]) / 2;
+    let d3 = (perfectColorLab[2] - colors[i].lab[2]) / 2;
+    let curDistance = Math.sqrt(d1 * d1 + d2 * d2 + d3 * d3);    
+    if (curDistance < minDistance) {
+      minDistance = curDistance;
+      paletteColor = colors[i];
+    }
+  }
+  let perr = parseInt(perfectColorRgb[0] * 255);
+  let perg = parseInt(perfectColorRgb[1] * 255);
+  let perb = parseInt(perfectColorRgb[2] * 255);
+  let palr = paletteColor.rgb[0] * 255;
+  let palg = paletteColor.rgb[1] * 255;
+  let palb = paletteColor.rgb[2] * 255;
+  let paletteRow = parseInt(paletteColor.index % 90 / 5) + 1;
+  let paletteColumn = paletteColor.index % 5 + 1;
+  match.innerHTML = `
+    Selected <span class="color-preview" style="background: rgb(${perr}, ${perg}, ${perb})"></span>
+    Matched <span class="color-preview" style="background: rgb(${palr}, ${palg}, ${palb})"></span>
+    ${paletteColor.paletteName} #${paletteColor.index % 90} (row ${paletteRow} column ${paletteColumn})
+    R=${palr} G=${palg} B=${palb}
+  `;
+  updatingColors = null;
+}
+let updateOptions = e => {
+  paletteMask = 0;
+  for (let i = 0; i < inputs.options.palettes.length; i++)
+    if (inputs.options.palettes[i])
+      paletteMask += 1 << i;
+};
+
+let paletteDiv = document.querySelector(".palette-block");
+inputs.scale.onchange = e => updateStyle();
+inputs.constraint.onchange = e => updateStyle();
+inputs.hue.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
+inputs.saturation.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
+inputs.lightness.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
+inputs.red.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
+inputs.green.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
+inputs.blue.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
+inputs.options.onchange = e => updateOptions();
+paletteDiv.onmousemove = e => updateColorValues(e, 'hsl');
+
+glStart(paletteCanvas, document.querySelector('#vs').text, document.querySelector('#fs').text);
+updateStyle();
+updateColorValues({ offsetX: 255, offsetY: 255 }, 'hsl');
+</script>
