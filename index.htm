@@ -2273,7 +2273,7 @@ function glInit(gl, vertexShader, fragmentShader) {
   gl.useProgram(program);
 
   // Create a square as a strip of two triangles
-  let paletteTexture = glLoadTexture(gl, "wfpal-all.png");
+  let paletteTexture = glLoadTexture(gl, "palettes.png");
   let buffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0]), gl.STATIC_DRAW);
