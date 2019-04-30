@@ -2294,6 +2294,7 @@ void main() {
 
 const time0 = (new Date()).getTime() / 1000;
 let paletteMask = 0xFFFFFFFF;
+let isUpdateRequested = true;
 
 function glLoadTexture(gl, url) {
   let texture = gl.createTexture();
@@ -2307,6 +2308,7 @@ function glLoadTexture(gl, url) {
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    glRequestUpdate(gl);
   };
   image.src = url;
   return texture;
@@ -2348,12 +2350,19 @@ function glInit(gl, vertexShader, fragmentShader) {
 }
 
 function glUpdate(gl) {
-  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-  gl.uniform1f(gl.uConstraint, inputs.constraint.value / 100);
-  gl.uniform1f(gl.uLightness, inputs.lightness.value / 255);
-  gl.uniform1i(gl.uPaletteMask, paletteMask);
-  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  if (isUpdateRequested) {
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+    gl.uniform1f(gl.uConstraint, inputs.constraint.value / 100);
+    gl.uniform1f(gl.uLightness, inputs.lightness.value / 255);
+    gl.uniform1i(gl.uPaletteMask, paletteMask);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+  isUpdateRequested = false;
   requestAnimFrame(function() { glUpdate(gl); });
+}
+
+function glRequestUpdate() {
+  isUpdateRequested = true;
 }
 
 function glStart(canvas, vertexShader, fragmentShader) {
@@ -2503,6 +2512,8 @@ for (let [inputId, input] of Object.entries(inputs)) {
   Object.defineProperty(input, 'value', {
     get() { return inputRange.value; },
     set(v) {
+      if (inputNumber.value == v && inputRange.value == v)
+        return;
       inputNumber.value = inputRange.value = v;
       input.onchange(null);
     },
@@ -2543,6 +2554,8 @@ for (let i = 0; i < colors.length; i += 90) {
 }
 let paletteCanvas = document.querySelector('#palette');
 let style = document.querySelector('#style');
+let match = document.querySelector('#match');
+
 let updateStyle = () => {
   style.innerHTML = `
     :root {
@@ -2557,7 +2570,7 @@ let updateStyle = () => {
   `;
   paletteCanvas.width = paletteCanvas.height = parseInt(256 * inputs.scale.value / 100);
 };
-let match = document.querySelector('#match');
+
 let updatingColors = null;
 let updateColorValues = (e, mode) => {
   if (updatingColors != null || paletteMask == 0)
@@ -2615,6 +2628,7 @@ let updateColorValues = (e, mode) => {
   `;
   updatingColors = null;
 }
+
 let updateOptions = e => {
   paletteMask = 0;
   for (let i = 0; i < inputs.options.palettes.length; i++)
@@ -2623,16 +2637,16 @@ let updateOptions = e => {
 };
 
 let paletteDiv = document.querySelector(".palette-block");
-inputs.scale.onchange = e => updateStyle();
-inputs.constraint.onchange = e => updateStyle();
+inputs.scale.onchange = e => { updateStyle(); glRequestUpdate(); };
+inputs.constraint.onchange = e => { updateStyle(); glRequestUpdate(); }
 inputs.hue.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
 inputs.saturation.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
-inputs.lightness.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); };
+inputs.lightness.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); glRequestUpdate(); };
 inputs.red.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
 inputs.green.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
 inputs.blue.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
-inputs.options.onchange = e => updateOptions();
-paletteDiv.onmousemove = e => updateColorValues(e, 'hsl');
+inputs.options.onchange = e => { updateOptions(); updateColorValues(null, 'hsl'); glRequestUpdate(); }
+paletteDiv.onmousemove = e => { updateColorValues(e, 'hsl'); }
 
 glStart(paletteCanvas, document.querySelector('#vertexShader').text, document.querySelector('#fragmentShader').text);
 updateStyle();
