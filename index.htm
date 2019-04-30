@@ -2572,11 +2572,16 @@ let updateStyle = () => {
 };
 
 let updatingColors = null;
-let updateColorValues = (e, mode) => {
+let lastColorSource = 'hsl';
+let updateColorValues = (e, colorSource) => {
   if (updatingColors != null || paletteMask == 0)
     return;
-  updatingColors = mode;
-  if (mode == 'hsl') {
+  if (colorSource != null)
+    lastColorSource  = colorSource;
+  else
+    colorSource = lastColorSource;
+  updatingColors = colorSource;
+  if (colorSource == 'hsl') {
     var perfectColorHsl = e !== null && e.offsetX !== undefined
       ? [ e.offsetX / inputs.scale.value / 2.55, 1 - e.offsetY / inputs.scale.value / 2.55, inputs.lightness.value / 255 ]
       : [ inputs.hue.value / 255, inputs.saturation.value / 255, inputs.lightness.value / 255 ];
@@ -2587,12 +2592,12 @@ let updateColorValues = (e, mode) => {
     var perfectColorHsl = rgb2hsl(perfectColorRgb);
   }
   let perfectColorLab = rgb2lab(perfectColorRgb);
-  inputs.hue.value = parseInt(perfectColorHsl[0] * 255);
-  inputs.saturation.value = parseInt(perfectColorHsl[1] * 255);
-  inputs.lightness.value = parseInt(perfectColorHsl[2] * 255);
-  inputs.red.value = parseInt(perfectColorRgb[0] * 255);
-  inputs.green.value = parseInt(perfectColorRgb[1] * 255);
-  inputs.blue.value = parseInt(perfectColorRgb[2] * 255);
+  inputs.hue.value = Math.round(perfectColorHsl[0] * 255);
+  inputs.saturation.value = Math.round(perfectColorHsl[1] * 255);
+  inputs.lightness.value = Math.round(perfectColorHsl[2] * 255);
+  inputs.red.value = Math.round(perfectColorRgb[0] * 255);
+  inputs.green.value = Math.round(perfectColorRgb[1] * 255);
+  inputs.blue.value = Math.round(perfectColorRgb[2] * 255);
   let minDistance = 999;
   let paletteColor = null;
   for (let i = 0; i < colors.length; i++) {
@@ -2645,10 +2650,10 @@ inputs.lightness.onchange = e => { updateStyle(); updateColorValues(e, 'hsl'); g
 inputs.red.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
 inputs.green.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
 inputs.blue.onchange = e => { updateStyle(); updateColorValues(e, 'rgb'); };
-inputs.options.onchange = e => { updateOptions(); updateColorValues(null, 'hsl'); glRequestUpdate(); }
+inputs.options.onchange = e => { updateOptions(); updateColorValues(null, null); glRequestUpdate(); }
 paletteDiv.onmousemove = e => { updateColorValues(e, 'hsl'); }
 
 glStart(paletteCanvas, document.querySelector('#vertexShader').text, document.querySelector('#fragmentShader').text);
 updateStyle();
-updateColorValues({ offsetX: 255, offsetY: 255 }, 'hsl');
+updateColorValues({ offsetX: 255, offsetY: 255 }, null);
 </script>
